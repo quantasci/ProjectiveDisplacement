@@ -1,3 +1,9 @@
-# Interactive Displacement Maps
-# Rama Karl (c) 2023. MIT License.
-Interactive displacement with semi-projective ray tracing.
+# Projective Displacement Mappping
+Reference CPU implementation for the paper:
+2025, Hoetzlein, "Projective Displacement Mapping for Ray Traced Editable Surfaces",
+Pacific Graphics 2025. Taipei, Taiwan.
+
+### License
+Rama Hoetzlein (c) Quanta Sciences, 2023-2025. 
+MIT License
+
