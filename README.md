@@ -1,12 +1,12 @@
 # Projective Displacement Mappping
 
-<img width=60% src="https://github.com/quantasci/ProjectiveDisplacement/blob/main/docs/pdm_teaser2.jpg" />
+<img width=80% src="https://github.com/quantasci/ProjectiveDisplacement/blob/main/docs/pdm_teaser2.jpg" />
 
 Reference CPU implementation for the paper:<br>
 2025, Hoetzlein, <a href="http://dx.doi.org/10.1111/cgf.70235">Projective Displacement Mapping for Ray Traced Editable Surfaces</a><br>
 Pacific Graphics 2025. Taipei, Taiwan.
 
-<img width=60% src="https://ramakarl.com/imgs/PG2025_Best_Paper.png" />
+<img width=80% src="https://ramakarl.com/imgs/PG2025_Best_Paper.png" />
 
 Project Website: <a href="https://ramakarl.com/pdm">https://ramakar.com/pdm</a><br>
 Full video (narrated): <a href="https://www.youtube.com/watch?v=2OcRSXS_dmQ">Youtube</a><br>
@@ -31,4 +31,4 @@ For GPU Implementation, contact me at: <a href="mailto:ramahoetzlein@gmail.com">
 Rama Hoetzlein (c) Quanta Sciences, 2023-2025. <br>
 MIT License
 
-<img width=60% src="https://github.com/quantasci/ProjectiveDisplacement/blob/main/docs/pdm_teaser1.jpg" />
+<img width=80% src="https://github.com/quantasci/ProjectiveDisplacement/blob/main/docs/pdm_teaser1.jpg" />
