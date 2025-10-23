@@ -20,8 +20,8 @@ Let me know if you have any issues building.
 
 ## CPU Implementation
 This repository contains the reference CPU implementation for Projective Displacement Mapping,
-for algorithm validation and correctness. No BVH, acceleration structures, or multi-core.
-Details can be found in proj_displace_mesh.cpp.
+for algorithm validation and correctness. No BVH, acceleration structures, or multi-core.<br>
+Details can be found in proj_displace_mesh.cpp.<br>
 The entry point for the primary algorithm is the function: RaytraceDisplacementMesh
 
 ## GPU Implementation
