@@ -8,7 +8,7 @@ Pacific Graphics 2025. Taipei, Taiwan.
 
 <img width=80% src="https://ramakarl.com/imgs/PG2025_Best_Paper.png" />
 
-Project Website: <a href="https://ramakarl.com/pdm">https://ramakar.com/pdm</a><br>
+Project Website: <a href="https://ramakarl.com/pdm">https://ramakarl.com/pdm</a><br>
 Full video (narrated): <a href="https://www.youtube.com/watch?v=2OcRSXS_dmQ">Youtube</a><br>
 Appendices & Proofs: <a href="https://arxiv.org/abs/2502.02011">arXiv</a><br>
 
