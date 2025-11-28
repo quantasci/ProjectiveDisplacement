@@ -449,16 +449,15 @@ void Sample::RaytraceMesh ( float bump_depth,  ImageX* img )
 				uv = uv1 * (bc.x) + uv2 * (bc.y) + uv3 * (1-bc.x-bc.y);				
 	
 				// read 16-bit grayscale bump map
-				tx = m_bump_img->GetPixelFilteredUV16 ( uv.x, uv.y ) * 255.0f;
+				tx = m_bump_img->GetPixelFilteredUV16 ( uv.x, uv.y );
 				
 				// read color map
-				c = m_color_img->GetPixelFilteredUV ( uv.x, uv.y ) * 255.0f;				
+				c = m_color_img->GetPixelFilteredUV ( uv.x, uv.y );				
 					
-				img->SetPixel ( x, y, Vec4F(c.x, c.y, c.z, 255.0) );	
+				img->SetPixel ( x, y, Vec4F(c.x, c.y, c.z, 1.0) );	
 			} 
 		}
 	}
-
 
 	// commit image to OpenGL (hardware gl texture) for on-screen display
 	img->Commit ( DT_CPU | DT_GLTEX );		
@@ -1155,9 +1154,6 @@ bool Sample::ShadeSurface ( int face, Vec3F rpos, Vec3F rdir, float tmin, float 
 	//--- color /w interpolated base normal
 	//clr = Vec3F(1,1,1) * 0.5f * float( pow( n0.Dot(L), 3) );
 
-	clr *= 255.0;
-	if (clr.x > 255 || clr.y > 255 || clr.z > 255) clr = Vec3F(255,255,255);
-
 	return true;
 }
 
@@ -1244,13 +1240,13 @@ void Sample::RaytraceDisplacementMesh ( ImageX* img )
 			ShadeSurface ( best_f, rpos, rdir, candidates[best_i].tmin, candidates[best_i].tmax, candidates[best_i].emin, candidates[best_i].emax, best_t, best_bc, n, clr );
 
 			if ( m_jitter_sample )
-				clr = (img->GetPixel( x, m_yline) * float(m_samples-1) + clr)/m_samples;					
+				clr = (img->GetPixel( x, m_yline) * float(m_samples-1) + clr) / m_samples;					
 
 			//-- debug prism sides
 			//if (best_s !=-1 ) c += Vec3F( (best_s==0), (best_s==1), (best_s==2) ) *20.0f;
 
 			// Write pixel
-			img->SetPixel ( x, m_yline, Vec4F(clr.x, clr.y, clr.z, 255.0) );
+			img->SetPixel ( x, m_yline, Vec4F(clr.x, clr.y, clr.z, 1.0) );
 
 		}
 
@@ -1272,9 +1268,7 @@ void Sample::VisTriangleSurface ( int face )
 	Vec3F n0, n1, n2, n;	
 	Vec3F q0, q1, p;
 	Vec2F uv0,uv1,uv2, uv;
-	
-	if ( face==5 ) 
-		bool stop=true;
+
 
 	f = (AttrV3*) m_mesh->GetElem(BFACEV3, face);
 	s = &m_prisms[ face ];		
