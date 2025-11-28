@@ -13,10 +13,20 @@ Full video (narrated): <a href="https://www.youtube.com/watch?v=2OcRSXS_dmQ">You
 Appendices & Proofs: <a href="https://arxiv.org/abs/2502.02011">arXiv</a><br>
 
 ## How to Build
-Linux: Run the build.sh script<br>
-Windows: Run the build.bat script<br>
-Read the scripts themselves for more details.<br>
-Let me know if you have any issues building.
+**Updated Nov 2025**<br>
+Build with cmake is now simpler and faster.<br>
+Libmin dependent code is directly compiled into the project (no shared or static libs).<br>
+Steps:<br>
+1. Clone this ProjectiveDisplacement repo<br>
+2. Clone <a href="https://github.com/ramakarl/libmin">libmin</a> as a sibling folder<br>
+<pre>
+\codes
+ ├── \ProjectiveDisplacement
+ └── \libmin
+</pre>
+3. Run cmake or cmake-gui on the ProjectiveDisplacement cmake.<br>
+
+See <a href="https://github.com/ramakarl/libmin">libmin</a> for more details.
 
 ## CPU Implementation
 This repository contains the reference CPU implementation for Projective Displacement Mapping,
